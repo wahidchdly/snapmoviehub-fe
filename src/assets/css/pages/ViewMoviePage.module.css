@@ -1,0 +1,136 @@
+.imageContainer {
+  display: flex;
+  width: 100%;
+}
+
+.image {
+  width: 90%;
+  height: 50%;
+  margin: 5% auto 0;
+  border-radius: 0.8rem;
+}
+
+.movieContent {
+  display: block;
+  width: 100%;
+  margin-top: 3rem;
+  padding-left: 5%;
+}
+
+.movieContent h1 {
+  width: fit-content;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-size: 4.8rem;
+  color: #040505;
+}
+
+.movieContent ul {
+  display: flex;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.movieContent ul li {
+  display: inline;
+  margin: 1.6rem 0;
+  padding: 0.8rem;
+
+  font-size: 1.6rem;
+  list-style: none;
+  border: 0.2rem solid rgba(0, 0, 0, 0.56);
+}
+
+.reactMarkDown {
+  margin: 1rem 5% 0;
+  font-size: 2.1rem;
+  margin-bottom: 2rem;
+}
+
+.reactMarkDown br:nth-child(2) {
+  display: none;
+}
+
+section div h1 {
+  padding-left: 5%;
+  padding-bottom: 2rem;
+  text-align: left;
+  color: #000;
+}
+
+.castMainContainer {
+  padding: 0 0 3.6rem;
+}
+
+.castBox {
+  display: grid;
+  position: relative;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-between;
+
+  padding: 3rem;
+  margin: 0 5%;
+
+  border: 0.1rem solid #000;
+}
+
+.cast {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 2rem;
+}
+
+.cast:nth-child(even) {
+  margin-bottom: 0;
+}
+
+.cast img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50rem;
+  object-fit: cover;
+}
+
+.cast p {
+  width: 100%;
+  font-size: 1.6rem;
+  margin-left: 1.6rem;
+  color: #000;
+}
+
+.cast p:nth-child(2) {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 770px) {
+  .castBox {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(3, 10rem);
+    justify-content: space-evenly;
+
+    padding: 1.6rem;
+  }
+
+  .cast {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .castBox {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+
+    padding: 1.6rem;
+  }
+
+  .cast {
+    padding-bottom: 1.6rem;
+  }
+}

@@ -1,0 +1,64 @@
+section {
+  background: #fff;
+}
+
+.imgWrapper {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.frame {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.movie-section {
+  display: flex;
+  width: 100%;
+  padding: 2.8rem 2.4rem;
+}
+
+.actions {
+  padding: 2.4rem;
+  padding-top: 0;
+  text-align: center;
+}
+
+.actions button {
+  cursor: pointer;
+  padding: 0.8rem 2.4rem;
+  border-color: transparent;
+
+  background: #e5e5e5;
+  border-radius: 0.5rem;
+}
+
+.buttonText {
+  margin: 0;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #575757;
+}
+
+@media (max-width: 1200px) {
+  .frame {
+    transform: scale(1.5);
+  }
+}
+
+@media (max-width: 800px) {
+  .frame {
+    transform: scale(2);
+  }
+}
+
+@media (max-width: 500px) {
+  .frame {
+    transform: scale(2.5);
+  }
+
+  .movie-section {
+    padding: 2.8rem 1.6rem;
+  }
+}

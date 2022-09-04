@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+  --white: #f9f9f9;
+  --black: #2c292b;
+  --gray: #85888c;
+  --gradientColor1: #306099;
+  --gradientColor2: #58b368;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+
+  max-width: 192rem;
+
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+
+  background: linear-gradient(
+    107.56deg,
+    var(--gradientColor1) 0%,
+    var(--gradientColor2) 100%
+  );
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--black);
+}
+
+h2 {
+  font-size: 2.4rem;
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

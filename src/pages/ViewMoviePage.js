@@ -1,5 +1,4 @@
 import { useQuery } from "react-query";
-import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import ReactMarkdown from "react-markdown";
@@ -15,8 +14,6 @@ import classes from "../assets/css/pages/ViewMoviePage.module.css";
 import ScrollButton from "../components/partials/ScrollButton";
 
 export default function ViewMoviePage() {
-  const [isLoading, setIsLoading] = useState(true);
-
   const { id } = useParams();
 
   const viewMovie = useQuery(
@@ -40,13 +37,7 @@ export default function ViewMoviePage() {
   const categories = get(viewMovie, "data.data[0].categories_v");
   const casts = get(viewMovie, "data.data[0].casts_v");
 
-  useEffect(() => {
-    if (viewMovie) {
-      setIsLoading(false);
-    }
-  }, [viewMovie]);
-
-  if (isLoading) {
+  if (viewMovie.isLoading) {
     return (
       <section style={{ height: "90vh" }}>
         <LoadingSpinner />
